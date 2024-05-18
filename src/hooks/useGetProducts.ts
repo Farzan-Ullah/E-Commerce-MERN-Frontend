@@ -5,7 +5,9 @@ export const useGetProducts = () => {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const products = await axios.get("http://localhost:3001/products");
+    const products = await axios.get(
+      "https://my-fmart-003.onrender.com/products"
+    );
     setProducts(products.data.products);
   };
 

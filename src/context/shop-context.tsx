@@ -40,7 +40,7 @@ export const ShopContextProvider = (props) => {
 
   const fetchAvailableMoney = async () => {
     const res = await axios.get(
-      `http://localhost:3001/auth/available-money/${localStorage.getItem(
+      `https://my-fmart-003.onrender.com/auth/available-money/${localStorage.getItem(
         "userID"
       )}`,
       { headers }
@@ -50,7 +50,7 @@ export const ShopContextProvider = (props) => {
 
   const fetchPurchasedItems = async () => {
     const res = await axios.get(
-      `http://localhost:3001/products/purchased-items/${localStorage.getItem(
+      `https://my-fmart-003.onrender.com/products/purchased-items/${localStorage.getItem(
         "userID"
       )}`,
       { headers }
@@ -118,7 +118,7 @@ export const ShopContextProvider = (props) => {
     const body = { customerID: localStorage.getItem("userID"), cartItems };
     try {
       const res = await axios.post(
-        "http://localhost:3001/products/checkout",
+        "https://my-fmart-003.onrender.com/products/checkout",
         body,
         { headers }
       );
